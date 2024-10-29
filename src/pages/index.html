@@ -3,7 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна</title>
+    <link rel="icon" href="C:\Users\vitpi\lab3\webpack-project\src\assets\images\icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Головна сторінка</title>
+    <style>
+        /* Базові стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        /* Шапка і навігація */
+        header {
+            background-color: #4CAF50;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Основний контент */
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        /* Стили для секцій */
+        section {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5em;
+            margin-bottom: 2em;
+        }
+
+        section h2 {
+            margin-top: 0;
+        }
+
+        /* Стили для блоку з цікавою інформацією */
+        aside {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5em;
+            margin-top: 2em;
+        }
+
+        /* Підвал */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Стиль для блоку з цитатою */
+        blockquote {
+            border-left: 4px solid #4CAF50;
+            margin: 0,5em 0;
+            padding-left: 1em;
+            color: #666;
+        }
+
+        /* Стиль для зображень */
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+
+        /* Стиль для маленького зображення */
+        .small-image {
+            width: 200px; /* Задайте бажану ширину */
+            height: auto; /* Зберегти співвідношення сторін */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,42 +129,40 @@
     </header>
 
     <main>
-        <h1>Ласкаво просимо на наш сайт</h1>
+        <h1>Ласкаво просимо на мій сайт</h1>
         
         <section>
-            <h2>Про нас</h2>
-            <p>Ми - команда ентузіастів, які люблять <em>веб-розробку</em> та <strong>технології</strong>.</p>
+            <h2>Моя біографія</h2>
+            <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images\Glav.png" alt="Опис зображення" class="small-image" />
+            <p>Це - я,<strong>Інженер програмного забезпечення</strong>. 
             <blockquote>
-                <p>Веб-розробка - це мистецтво створення цифрових світів.</p>
-                - Невідомий розробник
+                <p>Я студент Запорізького Національного Університету , навчаюсь на 3 курсі за професією "Програмна інженерія".Проживаю в місті Запоріжжя , де отримав свій перший диплом молодшого бакалавра , та технічну спеціальність. На даний момент працюю на новій пошті ,а хотілося б розвиватися в сфері ІТ.</p>
+                <footer> Півень Віталій Миколайович</footer>
             </blockquote>
         </section>
         
         <section>
-            <h2>Наші послуги</h2>
+            <h2>Мови вивчення</h2>
             <ul>
-                <li>Розробка веб-сайтів</li>
-                <li>Оптимізація SEO</li>
-                <li>Веб-дизайн</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C#</li>
+                <li>C++</li>
             </ul>
         </section>
         
         <section>
-            <h2>Контакти</h2>
-            <address>
-                Email: <a href="mailto:info@example.com">info@example.com</a><br>
-                Телефон: <a href="tel:+380123456789">+38 (012) 345-67-89</a>
-            </address>
+            <h2>Мої захоплення</h2>
+            <p>Окрім навчання та роботи маю чимало захоплень які допомагають відпочити від всієї буденної атмосфери.</p>
+            <ul>
+                <li>Кіберспорт</li><p>Зокрема граю в шутери та стратегії в реальному часі.Для мене це не тільки засіб для того, щоб витратити час , а засіб заспокоїтися та покращити свою реакцію, покращити еритичне мислення та вміння працювати в команді. </p>
+            <li>Читання науково-популярної літератури</li><p>Прагну розширити свій кругозір , тому читаю книги теми які пов'язані з ІТ , штучним інтелектом та саморозвиток. Вважаю , що це допоможе залишитися в курсі технологічних трендів і краще розуміти принципи які використовую на практиці.</p>
+            <li>Спорт</li><p>Щоб підтримувати фізичну форму, періодично відвідую тренажерний зал.Спорт допомагає зберегти концентрацію на фокусі для навчання та проєктів , здоровий спосіб життя.</p>
         </section>
-        
-        <aside>
-            <h3>Цікавий факт</h3>
-            <p>Чи знали ви, що перший веб-сайт був опублікований у 1991 році?</p>
-        </aside>
     </main>
 
     <footer>
-        <p>&copy; 2024 Ваш сайт</p>
+        <p>&copy; 2024 Всі права захищено автором цього сайту</p>
     </footer>
 </body>
 </html>

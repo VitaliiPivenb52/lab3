@@ -3,44 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/icon.png" type="image/png">
     <title>Фотогалерея</title>
+    <style>
+        /* Базові стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Шапка і навігація */
+        header {
+            background-color: #4CAF50;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        nav ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Основний контент */
+        main {
+            flex: 1;
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
+        /* Стилі для фотогалереї */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2em;
+        }
+
+        .gallery-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1em;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-item a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .gallery-item figcaption {
+            color: #666;
+            margin-top: 1em;
+            font-size: 0.9em;
+        }
+
+        /* Підвал */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="rozklad.html">Розклад</a></li>
-                <li><a href="news.html">Новини</a></li>
-                <li><a href="photo.html">Фото</a></li>
+                <li><a href="./index.html">Головна</a></li>
+                <li><a href="./rozklad.html">Розклад</a></li>
+                <li><a href="./news.html">Новини</a></li>
+                <li><a href="./photo.html">Фото</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <h1>Фотогалерея</h1>
-        
         <div class="gallery">
-            <figure>
-                <a href="/assets/images/photo1.jpg" target="_blank">
-                    <img src="/assets/images/photo1-thumb.jpg" alt="Опис фото 1">
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/coffee-bar.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/coffee-bar.png" 
+                         alt="Студентське кафе"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
                 </a>
-                <figcaption>Фото 1 (Оригінал: 1920x1080)</figcaption>
+                <figcaption>Студентське кафе (Оригінал: 564x846px)</figcaption>
             </figure>
             
-            <figure>
-                <a href="/assets/images/photo2.jpg" target="_blank">
-                    <img src="/assets/images/photo2-thumb.jpg" alt="Опис фото 2">
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Bibliotecka.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Bibliotecka.png" 
+                         alt="Студентська бібліотека"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
                 </a>
-                <figcaption>Фото 2 (Оригінал: 1600x900)</figcaption>
+                <figcaption>Студентська бібліотека (Оригінал: 564x818px)</figcaption>
             </figure>
             
-            <!-- Додайте інші фотографії за аналогією -->
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/sport-playground.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/sport-playground.png" 
+                         alt="Спортивний майданчик"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Спортивний майданчик (Оригінал: 736x1104px)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Coding.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Coding.png" 
+                         alt="Програмування"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Програмування (Оригінал: 736x736px)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Student.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Student.png" 
+                         alt="Студентський парк"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Студентський парк (Оригінал: 564x564px)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/ZNU.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/ZNU.png" 
+                         alt="Студентський парк"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Запорізький Національний Університет (Оригінал: 300x200px)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Student1.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Student1.png" 
+                         alt="Студенти на навчанні"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Навчання (Оригінал: 564x317px)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Gurtojitock.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/Gurtojitock.png" 
+                         alt="Гуртожиток"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Гуртожиток (Оригінал: 300x200px)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <a href="C:\Users\vitpi\lab3\webpack-project\src\assets\images/process.png" target="_blank">
+                    <img src="C:\Users\vitpi\lab3\webpack-project\src\assets\images/process.png" 
+                         alt="Командна робота"
+                         onerror="this.onerror=null; this.src='./assets/images/placeholder.png';">
+                </a>
+                <figcaption>Командна робота (Оригінал: 564x751px)</figcaption>
+            </figure>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Ваш сайт</p>
+        <p>&copy; 2024 Всі права захищено автором цього сайту</p>
     </footer>
 </body>
 </html>

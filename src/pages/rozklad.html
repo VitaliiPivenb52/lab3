@@ -3,7 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\vitpi\lab3\webpack-project\src\assets\images\icon.png" type="C:\Users\vitpi\lab3\webpack-project\src\assets\images\icon.png">
+    <link rel="stylesheet" href="styles.css">
     <title>Розклад</title>
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+    
+        /* Шапка и навигация */
+        header {
+            background-color: #4CAF50;
+            padding: 1em;
+            text-align: center;
+        }
+    
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+    
+        nav ul li a {
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+    
+        nav ul li a:hover {
+            background-color: #f0f0f0;
+        }
+    
+        /* Основной контент */
+        main {
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        h1, h2 {
+            color: #4CAF50;
+        }
+    
+        /* Таблица */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            background-color: white;
+        }
+    
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+    
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        /* Список преподавателей */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        li {
+            margin: 1em 0;
+            padding: 0.5em;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    
+        li strong {
+            color: #4CAF50;
+            display: block;
+            margin-bottom: 0.5em;
+        }
+    
+        /* Подвал */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,43 +130,77 @@
     <main>
         <h1>Розклад занять</h1>
         
-        <table border="1">
-            <caption>Розклад на поточний семестр</caption>
-            <thead>
-                <tr>
-                    <th>Час</th>
-                    <th>Понеділок</th>
-                    <th>Вівторок</th>
-                    <th>Середа</th>
-                    <th>Четвер</th>
-                    <th>П'ятниця</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>8:30 - 10:05</td>
-                    <td>Математика</td>
-                    <td>Фізика</td>
-                    <td>Програмування</td>
-                    <td>Англійська мова</td>
-                    <td>Веб-технології</td>
-                </tr>
-                <!-- Додайте інші рядки за потребою -->
-            </tbody>
-        </table>
-        
-        <h2>Список викладачів</h2>
-        <ul>
-            <li>Іванов І.І. - Математика</li>
-            <li>Петрова П.П. - Фізика</li>
-            <li>Сидоренко С.С. - Програмування</li>
-            <li>Коваленко К.К. - Англійська мова</li>
-            <li>Шевченко Ш.Ш. - Веб-технології</li>
-        </ul>
+        <section>
+            <h2></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Час</th>
+                        <th>Понеділок</th>
+                        <th>Вівторок</th>
+                        <th>Середа</th>
+                        <th>П'ятниця</th>
+                        <th>Субота</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12:55 - 14:15</td>
+                        <td>Веб-програмування</td>
+                        <td>Мови програмування мобільних пристроїв</td>
+                        <td>Анализ вимог до ПЗ</td>
+                        <td>Сист.віртуалізації та контейнеризації</td>
+                        <td>Соціологія</td>
+                    </tr>
+                    <tr>
+                        <td>14:30 - 15:50</td>
+                        <td>Аналіз вимог до ПЗ</td>
+                        <td>Візуальні мови програмування</td>
+                        <td>Веб програмування</td>
+                        <td>Мови програмування мобільних пристроїв</td>
+                        <td>Англійська мова</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Викладачі</h2>
+            <ul>
+                <li>
+                    <strong>Веб-програмування</strong>
+                    <p>Дребезов Денис Олегович </p>
+                </li>
+                <li>
+                    <strong>Аналіз вимог до ПЗ</strong>
+                    <p>Мильцев Олександр Михайлович</p>
+                </li>
+                <li>
+                    <strong>Сист.віртуалізації та контейнеризації</strong>
+                    <p>Ракша Владислав Ігорович</p>
+                </li>
+                <li>
+                    <strong>Соціологія</strong>
+                    <p>Бондаренко Олег Валерійович</p>
+                </li>
+                <li>
+                    <strong>Мови програмування мобільних пристроїв</strong>
+                    <p>Дребезов Денис Олегович</p>
+                </li>
+                <li>
+                    <strong>Англійська мова</strong>
+                    <p>Волкова Анжела Володимирівна</p>
+                </li>
+                <li>
+                    <strong>Візуальні мови програмування</strong>
+                    <p>Красікова Ірина Володимирівна</p>
+                </li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Ваш сайт</p>
+        <p>&copy; 2024 Всі права захищено автором цього сайту</p>
     </footer>
 </body>
 </html>
